@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kpazminoExamen.Views.Login"
+             Title="LOGIN">
+    <VerticalStackLayout
+    Spacing="20"
+    Padding="20"
+    VerticalOptions="CenterAndExpand"
+    HorizontalOptions="CenterAndExpand">
+
+        
+        <Label 
+        Text="SISTEMA DE REGISTRO DE ESTUDIANTES"
+        TextColor="Red"
+        FontSize="20"
+        HorizontalOptions="Center"
+        VerticalOptions="CenterAndExpand" />
+        <Image Source="logo.png"
+        WidthRequest="250"
+        HorizontalOptions="Center"/>
+
+        <Grid RowSpacing="15" ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Text="Usuario"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           FontSize="20"
+           Grid.Row="0"
+           Grid.Column="0"/>
+            <Entry x:Name="txtusuario"
+           Placeholder="Usuario"
+           Keyboard="Text"
+           MaxLength="50"
+           Grid.Row="0"
+           Grid.Column="1"/>
+
+
+            <Label Text="Contraseña"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           FontSize="18"
+           Grid.Row="1"
+           Grid.Column="0"/>
+
+           <Entry x:Name="txtcontrasena"
+           Placeholder="Contraseña"
+           IsPassword="True"
+           Keyboard="Text"
+           MaxLength="50"
+           Grid.Row="1"
+           Grid.Column="1"/>
+
+            
+        </Grid>
+        <Button x:Name="btninicio"
+        Text="Iniciar Sesión"
+        Clicked="btninicio_Clicked"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>
